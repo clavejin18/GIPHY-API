@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIF Search</title>
+<!--CSS and Bootstrap links-->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Header of webpage-->
+<div class="jumbotron">
+        <div class="container">
+            <h1>
+                GIF Search
+                <p>
+                    Search for GIFs!
+                </p>
+
+            </h1>
+        </div>
+    </div>
+    <!-- Buttons  -->
+    <div id="gifButtonsView" class="container">
+    </div>
+     <!-- Main Container  -->
+    <div class="container">
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <!-- Gifs  -->
+            <div id="gifView"></div>
+        </div>
+         <!-- Action Submission Form  -->
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <form id="gif-form" role="form">
+                <h2><legend>GIF Submission</legend></h2>
+                <div class="form-group">
+                    <label for="action-input">Add your GIF below</label>
+                    <input type="text" id="action-input">
+                </div>
+                <input id="addGif" type="submit" value="Add GIF" class="btn btn-primary">
+            </form>    
+        </div>
+    </div>
+<!-- scripts links-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/gif.js"></script>   
+</body>
+</html>
