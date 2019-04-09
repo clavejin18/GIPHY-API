@@ -73,7 +73,7 @@ function displayGifs(){
 // Calling functions 
 displayGifButtons();
 addNewButton();
-// Document event listeners 
+// Document event listeners. This is not working. Trying to figure out why the clicks are not registering.
 $(document).on("click", ".newGif", displayGifs);
 $(document).on("click", ".image", function(){
     var state = $(this).attr('data-state');
