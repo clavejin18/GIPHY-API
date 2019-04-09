@@ -45,24 +45,27 @@ function displayGifs(){
         if (gifResults == ""){
           alert("There isn't a gif for this selected button");
         }
-// For loop 
+// For loop that assigns rating to each gif
         for (var i=0; i<gifResults.length; i++){
-
-            var gifDiv = $("<div>"); //div for the gifs to go inside
+// creating a new giv for each gif
+            var gifDiv = $("<div>"); 
             gifDiv.addClass("gifDiv");
-            // pulling rating of gif
             var gifRating = $("<p>").text("Rating: " + gifResults[i].rating);
             gifDiv.append(gifRating);
-            // pulling gif
             var gifImage = $("<img>");
-            gifImage.attr("src", gifResults[i].images.fixed_height_small_still.url); // still image stored into src of image
-            gifImage.attr("data-still",gifResults[i].images.fixed_height_small_still.url); // still image
-            gifImage.attr("data-animate",gifResults[i].images.fixed_height_small.url); // animated image
-            gifImage.attr("data-state", "still"); // set the image state
+            gifImage.attr("src", gifResults[i]
+// storing a gif as a fixed image
+            .images.fixed_height_small_still.url); 
+            gifImage.attr("data-still",gifResults[i].images.fixed_height_small_still.url)
+            gifImage.attr("data-animate",gifResults[i]
+// animated gifs
+            .images.fixed_height_small.url); 
+// setting image state
+            gifImage.attr("data-state", "still"); 
             gifImage.addClass("image");
+// appending gif image to each gif div
             gifDiv.append(gifImage);
-            // pulling still image of gif
-            // adding div of gifs to gifsView div
+// adding gifs to gifView ID
             $("#gifsView").prepend(gifDiv);
         }
     });
